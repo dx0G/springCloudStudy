@@ -36,4 +36,14 @@ public class PaymentController {
         Payment payment = paymentMapper.getPaymentById(id);
         return new CommonResult<>(200,"查询成功,port:"+port,payment);
     }
+
+    @GetMapping("/timeout")
+    public Integer feignTimout() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return port;
+    }
 }
