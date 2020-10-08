@@ -1,8 +1,10 @@
 package com.guodx.springCloud;
 
+import com.guodx.springCloud.config.MyRuleConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
 
 /**
  * @Author: guodx
@@ -12,6 +14,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  */
 @SpringBootApplication
 @EnableEurekaClient
+@RibbonClient(name = "cloud-eureka-payment-service",configuration = MyRuleConfig.class)
 public class EurekaOrder80Application {
 
     public static void main(String[] args) {
