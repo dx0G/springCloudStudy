@@ -22,6 +22,8 @@
         <module>cloud-feign-order-80</module>
         <module>cloud-hystrix-order-80</module>
         <module>cloud-hystrix-payment-8005</module>
+        <module>cloud-hystrix-dashborad-9001</module>
+        <module>cloud-gateway-9527</module>
     </modules>
 
     <!--统一管理jar包版本-->
@@ -39,11 +41,11 @@
 
     <dependencyManagement>
         <dependencies>
-<!--            <dependency>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-project-info-reports-plugin</artifactId>-->
-<!--                <version>3.1.0</version>-->
-<!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>org.apache.maven.plugins</groupId>-->
+            <!--                <artifactId>maven-project-info-reports-plugin</artifactId>-->
+            <!--                <version>3.1.0</version>-->
+            <!--            </dependency>-->
             <!--spring boot 2.2.2-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -103,5 +105,5 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    
+
 </project>
