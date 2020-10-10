@@ -15,6 +15,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 public class ConsulOrder80Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(ConsulOrder80Application.class);
+        SpringApplication.run(ConsulOrder80Application.class, args);
     }
 }

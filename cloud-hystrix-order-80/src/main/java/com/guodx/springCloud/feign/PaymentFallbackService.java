@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
  * @Version: 1.0
  */
 @Service
-public class PaymentFallbackService implements PaymentService{
+public class PaymentFallbackService implements PaymentService {
     @Override
     public String ok() {
         return "PaymentFallbackService,O(∩_∩)O哈哈~";

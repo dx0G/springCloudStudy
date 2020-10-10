@@ -2,18 +2,19 @@ package com.guodx.springCloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 
 /**
  * @Author: guodx
- * @Date: 2020/9/29 8:36 下午
+ * @Date: 2020/10/9 9:52 下午
  * @Description:
  * @Version: 1.0
  */
 @SpringBootApplication
-@EnableDiscoveryClient
-public class ZkPayment8003Application {
+@EnableHystrixDashboard
+public class HystrixDashboard9001Application {
     public static void main(String[] args) {
-        SpringApplication.run(ZkPayment8003Application.class, args);
+        SpringApplication.run(HystrixDashboard9001Application.class, args);
     }
+
 }

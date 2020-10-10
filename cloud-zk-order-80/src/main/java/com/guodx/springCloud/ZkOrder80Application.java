@@ -15,6 +15,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 public class ZkOrder80Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(ZkOrder80Application.class);
+        SpringApplication.run(ZkOrder80Application.class, args);
     }
 }

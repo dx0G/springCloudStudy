@@ -52,8 +52,7 @@ public class MyRule extends AbstractLoadBalancerRule {
             }
 
             // 若调用次数小于4次，一直调用可用服务列表中索引为 currentIndex 的服务
-            if(total < 4)
-            {
+            if (total < 4) {
                 server = upList.get(currentIndex);
                 total++;
             } else {

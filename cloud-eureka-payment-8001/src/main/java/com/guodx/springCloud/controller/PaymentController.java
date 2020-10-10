@@ -24,17 +24,17 @@ public class PaymentController {
     @PostMapping("/create")
     public CommonResult<Payment> create(@RequestBody Payment payment) {
         int i = paymentMapper.insertPayment(payment);
-        if (i> 0) {
-            return new CommonResult<>(200,"创建成功,port:"+port,payment);
+        if (i > 0) {
+            return new CommonResult<>(200, "创建成功,port:" + port, payment);
         } else {
-            return new CommonResult<>(500,"创建失败",null);
+            return new CommonResult<>(500, "创建失败", null);
         }
     }
 
     @GetMapping("/getById/{id}")
     public CommonResult<Payment> getById(@PathVariable("id") Long id) {
         Payment payment = paymentMapper.getPaymentById(id);
-        return new CommonResult<>(200,"查询成功,port:"+port,payment);
+        return new CommonResult<>(200, "查询成功,port:" + port, payment);
     }
 
     @GetMapping("/timeout")

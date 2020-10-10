@@ -16,6 +16,6 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @MapperScan("com.guodx.springCloud.dao")
 public class EurekaPayment8001Application {
     public static void main(String[] args) {
-        SpringApplication.run(EurekaPayment8001Application.class);
+        SpringApplication.run(EurekaPayment8001Application.class, args);
     }
 }
