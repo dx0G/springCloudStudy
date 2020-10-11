@@ -13,6 +13,8 @@ spring:
         - id: payment_route
 #          uri: http://localhost:8001
           uri: lb://cloud-eureka-payment-service
+          filter:
+            -AddRequestHeader=X-Request-Id,1024
           predicates:
             - Path=/payment/getById/**
             - After=2020-10-10T09:43:21.519+08:00[Asia/Shanghai]
@@ -33,4 +35,6 @@ eureka:
     fetch-registry: true
     service-url:
       #集群版
-      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+#      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+      # 公益eureka
+      defaultZone: http://eureka.didispace.com/eureka/

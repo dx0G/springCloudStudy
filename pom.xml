@@ -24,6 +24,10 @@
         <module>cloud-hystrix-payment-8005</module>
         <module>cloud-hystrix-dashborad-9001</module>
         <module>cloud-gateway-9527</module>
+        <module>cloud-config-center-3344</module>
+        <module>cloud-config-client-3355</module>
+        <module>cloud-config-client-3366</module>
+        <module>cloud-config-client-3377</module>
     </modules>
 
     <!--统一管理jar包版本-->

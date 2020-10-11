@@ -1,0 +1,30 @@
+server:
+  port: 3355
+spring:
+  application:
+    name: cloud-config-client
+  cloud:
+    config:
+      label: main
+      name: config
+      profile: dev
+      uri: http://localhost:3344
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+
+eureka:
+  client:
+    service-url:
+      #集群版
+      #      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+      # 公益eureka
+      defaultZone: http://eureka.didispace.com/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -1,0 +1,33 @@
+server:
+  port: 3344
+
+
+eureka:
+  client:
+    service-url:
+      #集群版
+      #      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+      # 公益eureka
+      defaultZone: http://eureka.didispace.com/eureka/
+
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/dx0G/springcloud-config.git
+          search-paths:
+            - springcloud-config
+      label: main
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "bus-refresh"
